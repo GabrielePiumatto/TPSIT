@@ -22,11 +22,17 @@ int main()
 
     fileptr = fopen("lettura.csv", "r");
 
-    if(fileptr)
+    if(fileptr == NULL)
     {
 
+        printf("Errore file!");
+	
+    }
+
+    else
+    {
         while(fgets(riga, BSIZE, f))
-	    {
+	{
 		    field=strtok(riga,",");
 		    canzoni[counter].numero=atoi(field);
 		    field=strtok(NULL, ",");
@@ -35,12 +41,7 @@ int main()
 		    canzoni[counter].artista=strdup(field);
 
 		    counter++;
-	    }
-    }
-
-    else
-    {
-        printf("Errore file!");
+	}
     }
     
     fclose(fileptr);
