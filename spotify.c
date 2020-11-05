@@ -24,9 +24,7 @@ int main()
 
     if(fileptr == NULL)
     {
-
         printf("Errore file!");
-	
     }
 
     else
