@@ -31,12 +31,12 @@ int main()
     {
         while(fgets(riga, BSIZE, f))
 	{
-		    field=strtok(riga,",");
-		    canzoni[counter].numero=atoi(field);
-		    field=strtok(NULL, ",");
-		    canzoni[counter].titolo=strdup(field);
-		    field=strtok(NULL, ",");
-		    canzoni[counter].artista=strdup(field);
+		field=strtok(riga,",");
+		canzoni[counter].numero=atoi(field);
+		field=strtok(NULL, ",");
+		canzoni[counter].titolo=strdup(field);
+		field=strtok(NULL, ",");
+		canzoni[counter].artista=strdup(field);
 
 		    counter++;
 	}
