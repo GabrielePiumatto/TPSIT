@@ -40,7 +40,6 @@ struct El * dequeue(struct El **head, struct El **tail) {
 
 int main() {
     int n;
-    
 
     printf("Inserisci un numero : ");
     scanf("%d", n);
